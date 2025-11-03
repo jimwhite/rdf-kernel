@@ -137,9 +137,11 @@ class MagicProcessor:
         lines = ["Available magic commands:", ""]
         
         for magic, (param, help_text) in sorted(self.MAGICS.items()):
-            lines.append(f"  {magic} {param}")
-            lines.append(f"    {help_text}")
-            lines.append("")
+            lines.extend([
+                f"  {magic} {param}",
+                f"    {help_text}",
+                ""
+            ])
         
         return "\n".join(lines)
 

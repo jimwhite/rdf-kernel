@@ -234,7 +234,6 @@ class RDFKernel(Kernel):
 
     def _error_response(self, error: Exception) -> Dict[str, Any]:
         """Return an error response."""
-        import traceback
         error_msg = traceback.format_exc()
         tb_lines = error_msg.split('\n')
 

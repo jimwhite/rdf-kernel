@@ -130,11 +130,12 @@ def main():
         print("  3. Register kernel: install-rdf-kernel --user")
         print("  4. Run tests: pytest test_kernel.py")
         print("  5. Start Jupyter: jupyter notebook")
+        print("=" * 60)
         return 0
     else:
         print("✗ Some validation checks FAILED")
+        print("=" * 60)
         return 1
-    print("=" * 60)
 
 if __name__ == "__main__":
     sys.exit(main())
