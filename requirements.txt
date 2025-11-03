@@ -1,0 +1,10 @@
+# RDF Kernel Requirements
+# Install with: pip install -r requirements.txt
+
+ipykernel>=6.30
+traitlets>=5.0
+rdflib>=7.0.0
+SPARQLWrapper>=2.0.0
+pyshacl>=0.25.0
+pygments>=2.0
+jupyter-client>=8.0.0
