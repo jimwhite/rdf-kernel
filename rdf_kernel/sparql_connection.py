@@ -3,6 +3,7 @@ SPARQL connection and query execution.
 Based on the sparql-kernel connection module.
 """
 
+import json
 import logging
 from typing import Optional, Dict, List
 import SPARQLWrapper
@@ -241,14 +242,12 @@ class SPARQLConnection:
                 return self._format_table(data["head"]["vars"], bindings)
             else:
                 # Raw format
-                import json
                 return json.dumps(data, indent=2)
         elif "boolean" in data:
             # ASK query result
             return f"Result: {data['boolean']}"
         else:
             # Unknown format, return as JSON
-            import json
             return json.dumps(data, indent=2)
 
     def _format_table(self, variables: List[str], bindings: List[dict]) -> str:

@@ -134,10 +134,10 @@ class TestDataLoading:
         """Test loading Turtle data."""
         kernel = RDFKernel()
         
-        turtle_data = """
-        @prefix ex: <http://example.org/> .
-        ex:subject ex:predicate ex:object .
-        """
+        turtle_data = (
+            "@prefix ex: <http://example.org/> .\n"
+            "ex:subject ex:predicate ex:object ."
+        )
         
         result = kernel._load_data(turtle_data, format="turtle")
         assert "Added" in result
